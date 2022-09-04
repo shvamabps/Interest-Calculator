@@ -40,10 +40,10 @@ def index():
             df["Month"] = df.index + 1
     return render_template(
         "index.html",
-        data=df.to_html(classes="container mt-5 table table-bordered", index=False),
+        data=df.to_html(classes="container table table-bordered", index=False),
         dl=len(df),
     )
 
 
-# if __name__ == "__main__":
-#     app.run(host="0.0.0.0")
+# if __name__ == "__main__":  production main dalne se pehle comment karna hain isko
+#     app.run(host="0.0.0.0") production main dalne se pehle comment karna hain isko

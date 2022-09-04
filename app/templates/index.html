@@ -15,8 +15,6 @@
     <style>
         body {
             color: #fff;
-            height: 100vh;
-            width: 100vw;
             background: #222;
         }
 
@@ -42,8 +40,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            width: 100vw;
+            overflow: hidden;
         }
     </style>
 </head>
@@ -51,12 +48,13 @@
 <body>
     {%if dl > 0%}
     <h3 class="display-5">SIP Return Calculation</h3>
-    <div class="container d-flex align-items-end justify-content-end flex-row">
-        <div class="row">
-
-            <a style="text-decoration: none; color: #fff;" href="{{url_for('index')}}">
-                <button class="btn btn-outline-success">Back</button>
-            </a>
+    <div class="row">
+        <div class="col-3">
+            <div class="d-flex align-items-end justify-content-center">
+                <a style="text-decoration: none; color: #fff;" href="{{url_for('index')}}">
+                    <button class="btn btn-outline-success">Back</button>
+                </a>
+            </div>
         </div>
     </div>
     {{data|safe}}
